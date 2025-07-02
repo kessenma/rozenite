@@ -1,0 +1,34 @@
+{
+  "name": "@rozenite/network-activity-plugin",
+  "version": "1.0.0-alpha.4",
+  "description": "Network Activity for Rozenite.",
+  "type": "module",
+  "main": "./dist/react-native.cjs",
+  "module": "./dist/react-native.js",
+  "types": "./dist/react-native.d.ts",
+  "scripts": {
+    "build": "rozenite build",
+    "dev": "rozenite dev"
+  },
+  "dependencies": {
+    "@rozenite/plugin-bridge": "workspace:*",
+    "@tanstack/react-virtual": "^3.0.0",
+    "@floating-ui/react": "^0.26.0"
+  },
+  "devDependencies": {
+    "vite": "^6.0.0",
+    "@rozenite/vite-plugin": "workspace:*",
+    "typescript": "^5.7.3",
+    "rozenite": "workspace:*",
+    "react-native-web": "0.21.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.0",
+    "react-native": "0.76.0",
+    "@types/react": "~18.3.12"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "type": "file",
+    "name": "introduction",
+    "label": "Introduction"
+  },
+  {
+    "type": "file",
+    "name": "getting-started",
+    "label": "Getting started"
+  },
+  {
+    "type": "dir",
+    "name": "plugin-development",
+    "label": "Plugin Development"
+  },
+  {
+    "type": "dir",
+    "name": "official-plugins",
+    "label": "Official Plugins"
+  }
+]

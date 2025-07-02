@@ -1,0 +1,40 @@
+{
+  "name": "@rozenite/runtime",
+  "version": "1.0.0-alpha.4",
+  "description": "Rozenite runtime for React Native DevTools.",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "react-native",
+    "devtools",
+    "framework",
+    "plugin",
+    "orchestration"
+  ],
+  "homepage": "https://github.com/callstackincubator/rozenite#readme",
+  "bugs": {
+    "url": "https://github.com/callstackincubator/rozenite/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/callstackincubator/rozenite.git"
+  },
+  "author": "Szymon Chmal <szymon.chmal@callstack.com>",
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "types": "./dist/host.d.ts",
+      "import": "./dist/host.js",
+      "require": "./dist/host.cjs"
+    }
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=22"
+  }
+}

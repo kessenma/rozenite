@@ -1,0 +1,25 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compileOnSave": false,
+  "files": [],
+  "references": [
+    {
+      "path": "./apps/playground"
+    },
+    {
+      "path": "./packages/vite-plugin"
+    },
+    {
+      "path": "./packages/plugin-bridge"
+    },
+    {
+      "path": "./packages/cli"
+    },
+    {
+      "path": "./packages/runtime"
+    },
+    {
+      "path": "./packages/metro"
+    }
+  ]
+}

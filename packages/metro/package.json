@@ -1,0 +1,59 @@
+{
+  "name": "@rozenite/metro",
+  "version": "1.0.0-alpha.4",
+  "description": "Metro bundler plugin for Rozenite.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "templates"
+  ],
+  "keywords": [
+    "react-native",
+    "devtools",
+    "metro",
+    "plugin",
+    "bundler"
+  ],
+  "homepage": "https://github.com/callstackincubator/rozenite#readme",
+  "bugs": {
+    "url": "https://github.com/callstackincubator/rozenite/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/callstackincubator/rozenite.git"
+  },
+  "author": "Szymon Chmal <szymon.chmal@callstack.com>",
+  "license": "MIT",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "development": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "dependencies": {
+    "@rozenite/runtime": "workspace:*",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "serve-static": "^2.2.0",
+    "tslib": "^2.3.0"
+  },
+  "devDependencies": {
+    "@types/ejs": "^3.1.5",
+    "@types/express": "^5.0.3",
+    "@types/serve-static": "^1.15.8",
+    "metro-config": "^0.82.5"
+  },
+  "peerDependencies": {
+    "@react-native/debugger-frontend": "*",
+    "@react-native/dev-middleware": "*"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
