@@ -20,10 +20,6 @@ Install the Network Activity plugin as a development dependency using your prefe
 
 <PackageManagerTabs command="install -D @rozenite/network-activity-plugin" />
 
-## Configuration
-
-### React Native Integration
-
 Add the DevTools hook to your React Native app to enable network monitoring:
 
 ```typescript title="App.tsx"
@@ -35,22 +31,6 @@ function App() {
 
   return <YourApp />;
 }
-```
-
-### Metro Configuration
-
-The Network Activity plugin works with the standard Rozenite Metro configuration:
-
-```javascript title="metro.config.js"
-const { withRozenite } = require('@rozenite/metro');
-
-const config = {
-  // Your existing Metro configuration
-};
-
-module.exports = withRozenite(config, {
-  // Your Rozenite configuration
-});
 ```
 
 ## Usage
