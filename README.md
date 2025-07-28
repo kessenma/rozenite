@@ -10,10 +10,9 @@ Rozenite is a complete ecosystem for extending React Native DevTools with custom
 
 The documentation is available at [rozenite.dev](https://rozenite.dev). You can also use the following links to jump to specific topics:
 
-- [Quick Start](https://rozenite.dev/docs/getting-started/quick-start)
-- [About Rozenite](https://rozenite.dev/docs/getting-started/introduction)
-- [Plugin Development](https://rozenite.dev/docs/guides/plugin-development)
-- [API documentation](https://rozenite.dev/api/)
+- [Quick Start](https://rozenite.dev/docs/getting-started)
+- [About Rozenite](https://rozenite.dev/docs/introduction)
+- [Plugin Development](https://rozenite.dev/docs/plugin-development/plugin-development)
 
 ## Made with ❤️ at Callstack
 
