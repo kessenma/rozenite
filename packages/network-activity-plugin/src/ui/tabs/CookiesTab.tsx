@@ -101,8 +101,9 @@ export const CookiesTab = ({
   networkEntries,
 }: CookiesTabProps) => {
   return (
-    <ScrollArea className="h-full min-h-0 p-4">
-      {(() => {
+    <ScrollArea className="h-full w-full">
+      <div className="p-4">
+        {(() => {
         const entry = networkEntries.get(selectedRequest.id);
         if (!entry) {
           return (
@@ -286,6 +287,7 @@ export const CookiesTab = ({
           </div>
         );
       })()}
+      </div>
     </ScrollArea>
   );
 };
