@@ -1,5 +1,5 @@
-import { HttpMethod, NetworkActivityDevToolsClient } from '../shared/client';
-import { getHttpHeaderValue } from '../ui/utils/getHttpHeaderValue';
+import { HttpMethod, NetworkActivityDevToolsClient } from '../../shared/client';
+import { getHttpHeaderValue } from '../../ui/utils/getHttpHeaderValue';
 import { getNetworkRequestsRegistry } from './network-requests-registry';
 import { XHRInterceptor } from './xhr-interceptor';
 
@@ -42,7 +42,8 @@ const getResponseBody = async (
 ): Promise<string | null> => {
   const responseType = request.responseType;
 
-  if (responseType === 'text') {
+  // Response type is empty in certain cases, like when using axios.
+  if (responseType === '' || responseType === 'text') {
     return request.responseText as string;
   }
 
