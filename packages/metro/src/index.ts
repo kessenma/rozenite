@@ -65,6 +65,7 @@ export const withRozenite = async <T extends MetroConfig>(
         // Unfortunately, 'web' doesn't include certain internal modules like 'react-native/Libraries/WebSocket/WebSocketInterceptor'.
         // This is currently the only module that we need to mock, but it may change in the future.
         if (
+          platform === 'web' &&
           moduleName === 'react-native/Libraries/WebSocket/WebSocketInterceptor'
         ) {
           return {
