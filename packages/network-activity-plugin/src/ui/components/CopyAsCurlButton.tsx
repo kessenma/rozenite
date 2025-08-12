@@ -2,10 +2,10 @@ import { useCopyToClipboard } from '../hooks/useCopyToClipboard';
 import { Copy, Check } from 'lucide-react';
 import { Button } from './Button';
 import { generateCurlCommand } from '../utils/generateCurlCommand';
-import { HttpNetworkEntry } from '../state/model';
+import { HttpNetworkEntry, SSENetworkEntry } from '../state/model';
 
 export type CopyAsCurlButtonProps = {
-  selectedRequest?: HttpNetworkEntry;
+  selectedRequest?: HttpNetworkEntry | SSENetworkEntry;
 };
 
 export const CopyAsCurlButton = ({
