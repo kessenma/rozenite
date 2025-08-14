@@ -1,3 +1,29 @@
+## 1.0.0-alpha.11 (2025-08-14)
+
+### 🩹 Fixes
+
+- **@rozenite/metro:** Introduces the 'enhanceMetroConfig 'configuration property, designed to apply Metro config plugins like Expo Atlas and Redux DevTools. Unlike the previous method, the function passed to this property won’t run during bundling, which helps prevent the Metro process from hanging indefinitely with certain plugins (such as Redux DevTools). ([#51](https://github.com/callstackincubator/rozenite/pull/51))
+- **@rozenite/metro:** We are going to prevent any logic from being executed on both 'web' and 'server' environments. Additionally, there was a change needed in Metro to resolve missing WebSocketInterceptor in react-native-web environment. ([#54](https://github.com/callstackincubator/rozenite/pull/54))
+- **@rozenite/metro:** Rozenite won't be initialized when a bin alias is used to bundle/export. ([#56](https://github.com/callstackincubator/rozenite/pull/56))
+- **@rozenite/middleware:** React Native 0.81 introduced changes to the HTML structure of the main entry point for the React Native DevTools. The Rozenite injection pattern was updated to inject itself even when the structure of the file changes. ([#63](https://github.com/callstackincubator/rozenite/pull/63))
+- **@rozenite/mmkv-plugin:** We are going to prevent any logic from being executed on both 'web' and 'server' environments. Additionally, there was a change needed in Metro to resolve missing WebSocketInterceptor in react-native-web environment. ([#54](https://github.com/callstackincubator/rozenite/pull/54))
+- **@rozenite/network-activity-plugin:** Custom events emitted by EventSource connections will now be properly recognized and shown in the DevTools UI. ([#52](https://github.com/callstackincubator/rozenite/pull/52))
+- **@rozenite/network-activity-plugin:** You can now filter network requests by URL, method, or status, as well as by type (XHR, WS, SSR). ([#53](https://github.com/callstackincubator/rozenite/pull/53), [#46](https://github.com/callstackincubator/rozenite/issues/46))
+- **@rozenite/network-activity-plugin:** Introduce "Copy as cURL" feature to the Network Activity Plugin, enabling developers to easily copy any HTTP request as a cURL command for debugging purposes in terminal. The implementation includes comprehensive support for different request body types (JSON, FormData, binary data) with proper shell escaping, React Native-specific handling for FormData and Blob objects, and content-type inference. ([#24](https://github.com/callstackincubator/rozenite/pull/24))
+- **@rozenite/network-activity-plugin:** We are going to prevent any logic from being executed on both 'web' and 'server' environments. Additionally, there was a change needed in Metro to resolve missing WebSocketInterceptor in react-native-web environment. ([#54](https://github.com/callstackincubator/rozenite/pull/54))
+- **@rozenite/network-activity-plugin:** Resolved an issue in the Network Activity Plugin (204 requests). The issue was caused by receiving a response with status code 204 and no content. The original code attempted to check the .size property on a null object. ([#48](https://github.com/callstackincubator/rozenite/pull/48))
+- **@rozenite/network-activity-plugin:** Fixes content overflow issues in the Headers tab by implementing a proper grid layout with responsive columns and text wrapping. The Headers tab now uses reusable KeyValueGrid and Section components that prevent long URLs and header values from overflowing the container boundaries, ensuring better readability and UI consistency. ([#44](https://github.com/callstackincubator/rozenite/pull/44))
+- **@rozenite/performance-monitor-plugin:** This brand-new plugin can capture react-native-performance data (marks, metrics, and measures) and display them in a tabular format in your React Native DevTools. You can also export the data when needed for further analysis. ([#64](https://github.com/callstackincubator/rozenite/pull/64))
+- **@rozenite/plugin-bridge:** The communication layer provided by React Native DevTools is not available on the web; therefore, we should not attempt to create a client when the 'web' platform is detected. Instead, a warning will be printed indicating that the platform is unsupported. ([#50](https://github.com/callstackincubator/rozenite/pull/50), [#21](https://github.com/callstackincubator/rozenite/issues/21))
+- **@rozenite/redux-devtools-plugin:** We are going to prevent any logic from being executed on both 'web' and 'server' environments. Additionally, there was a change needed in Metro to resolve missing WebSocketInterceptor in react-native-web environment. ([#54](https://github.com/callstackincubator/rozenite/pull/54))
+- **@rozenite/tanstack-query-plugin:** We are going to prevent any logic from being executed on both 'web' and 'server' environments. Additionally, there was a change needed in Metro to resolve missing WebSocketInterceptor in react-native-web environment. ([#54](https://github.com/callstackincubator/rozenite/pull/54))
+
+### ❤️ Thank You
+
+- Nepein Andrey @NepeinAV
+- Szymon Chmal
+- zmtmaster @zmtmaster
+
 ## 1.0.0-alpha.10 (2025-08-08)
 
 ### 🩹 Fixes
