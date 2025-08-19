@@ -55,7 +55,7 @@ export type Response = {
   statusText: string;
   headers: HttpHeaders;
   contentType: string;
-  size: number;
+  size: number | null;
   responseTime: Timestamp;
 };
 
@@ -93,7 +93,7 @@ export type NetworkActivityEventMap = {
     requestId: RequestId;
     timestamp: Timestamp;
     duration: number;
-    size: number;
+    size: number | null;
     ttfb: number;
   };
 
