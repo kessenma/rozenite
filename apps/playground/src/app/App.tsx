@@ -23,6 +23,7 @@ import { useRef } from 'react';
 import { useReactNavigationDevTools } from '@rozenite/react-navigation-plugin';
 import { BottomTabNavigator } from './navigation/BottomTabNavigator';
 import { ParameterDisplayScreen } from './screens/ParameterDisplayScreen';
+import { RequestBodyTestScreen } from './screens/RequestBodyTestScreen';
 
 const queryClient = new QueryClient();
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -47,6 +48,7 @@ const Wrapper = () => {
       <Stack.Screen name="Landing" component={LandingScreen} />
       <Stack.Screen name="MMKVPlugin" component={MMKVPluginScreen} />
       <Stack.Screen name="NetworkTest" component={NetworkTestScreen} />
+      <Stack.Screen name="RequestBodyTest" component={RequestBodyTestScreen} />
       <Stack.Screen name="ReduxTest" component={ReduxTestScreen} />
       <Stack.Screen
         name="PerformanceMonitor"
