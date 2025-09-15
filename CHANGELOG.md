@@ -1,3 +1,14 @@
+## 1.0.0-alpha.14 (2025-09-15)
+
+### 🩹 Fixes
+
+- **@rozenite/repack:** Re.Pack now also includes the 'enabled' property, just like Metro. ([#107](https://github.com/callstackincubator/rozenite/pull/107))
+- **rozenite:** The 'init' command will now generate code with the 'enabled' property bound to the WITH_ROZENITE environment variable. ([#108](https://github.com/callstackincubator/rozenite/pull/108))
+
+### ❤️ Thank You
+
+- Szymon Chmal
+
 ## 1.0.0-alpha.13 (2025-09-15)
 
 ### 🩹 Fixes
