@@ -1,3 +1,24 @@
+## 1.0.0-alpha.13 (2025-09-15)
+
+### 🩹 Fixes
+
+- **@rozenite/metro:** Rozenite will no longer apply plugins during app bundling initiated by Xcode. ([#92](https://github.com/callstackincubator/rozenite/pull/92))
+- **@rozenite/metro:** Unfortunately, the React Native ecosystem is so diverse that it's difficult to keep up with all the ways Metro is invoked by the React Native CLI and Expo. Instead of constantly chasing edge cases and adding new scripts to the "probably bundling" list, users will now be able to conditionally enable Rozenite in development by providing the enabled option. This option can be set via an environment variable - for example, if ROZENITE_ENABLED is set, the option will be true. This change will significantly reduce maintenance overhead and make Rozenite even more versatile. ([#100](https://github.com/callstackincubator/rozenite/pull/100))
+- **@rozenite/mmkv-plugin:** The table is now vertically scrollable when it's needed. ([#94](https://github.com/callstackincubator/rozenite/pull/94))
+- **@rozenite/network-activity-plugin:** Added "copy as fetch" functionality to the network activity plugin with a unified dropdown interface for copying HTTP requests as both fetch() calls and cURL commands. ([#75](https://github.com/callstackincubator/rozenite/pull/75))
+- **@rozenite/network-activity-plugin:** Add explicit UI handling for multipart FormData and binary request bodies. ([#103](https://github.com/callstackincubator/rozenite/pull/103))
+- **@rozenite/network-activity-plugin:** SSE will no longer throw errors when EventSource is initialized before the plugin. ([#104](https://github.com/callstackincubator/rozenite/pull/104))
+- **@rozenite/react-navigation-plugin:** A new plugin that allows you to inspect the React Navigation state and view navigation actions in real time. ([#98](https://github.com/callstackincubator/rozenite/pull/98))
+- **@rozenite/repack:** Rozenite will now check if a compatible version of Re.Pack is present. ([#95](https://github.com/callstackincubator/rozenite/pull/95))
+- **rozenite:** Rozenite will now modify both Metro and Re.Pack configurations if they are present. ([#91](https://github.com/callstackincubator/rozenite/pull/91))
+
+### ❤️ Thank You
+
+- Jayson Martinez @Jheysoon
+- Matteo Pietro Dazzi
+- Nepein Andrey @NepeinAV
+- Szymon Chmal
+
 ## 1.0.0-alpha.12 (2025-08-25)
 
 ### 🩹 Fixes
