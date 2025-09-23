@@ -6,6 +6,11 @@
   },
   {
     "type": "file",
+    "name": "prior-art",
+    "label": "Prior Art"
+  },
+  {
+    "type": "file",
     "name": "getting-started",
     "label": "Getting started"
   },
@@ -18,10 +23,5 @@
     "type": "dir",
     "name": "official-plugins",
     "label": "Official Plugins"
-  },
-  {
-    "type": "file",
-    "name": "acknowledgements",
-    "label": "Acknowledgements"
   }
 ]
