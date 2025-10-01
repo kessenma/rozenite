@@ -51,7 +51,13 @@ postInspectorEvent({
   requestId,
   query,
   k: hits.length,
-  sources: hits.map(h => ({ id: h.id, score: h.score, uri: h.uri, title: h.metadata?.title, preview: h.text?.slice(0, 240) })),
+  sources: hits.map((h) => ({
+    id: h.id,
+    score: h.score,
+    uri: h.uri,
+    title: h.metadata?.title,
+    preview: h.text?.slice(0, 240),
+  })),
   latencyMs: performance.now() - t0,
   time: Date.now(),
 });

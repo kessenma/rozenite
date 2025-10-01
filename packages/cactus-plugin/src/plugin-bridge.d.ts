@@ -3,7 +3,10 @@
 
 declare module '@rozenite/plugin-bridge' {
   export function useRozeniteDevToolsClient(): {
-    subscribe: <T>(eventType: string, callback: (event: T) => void) => {
+    subscribe: <T>(
+      eventType: string,
+      callback: (event: T) => void
+    ) => {
       unsubscribe: () => void;
     };
   };

@@ -1,9 +1,9 @@
 export type RagSource = {
-  id: string;                // doc or chunk id
+  id: string; // doc or chunk id
   title?: string;
-  score?: number;            // similarity score
-  uri?: string;              // where it came from
-  preview?: string;          // first N chars
+  score?: number; // similarity score
+  uri?: string; // where it came from
+  preview?: string; // first N chars
 };
 
 export type LlmStart = {
@@ -11,14 +11,14 @@ export type LlmStart = {
   requestId: string;
   model: string;
   params: Record<string, unknown>; // temp, topP, max_tokens, tools, etc.
-  promptPreview: string;           // trim to, say, 500 chars
+  promptPreview: string; // trim to, say, 500 chars
   time: number;
 };
 
 export type LlmChunk = {
   kind: 'llm:chunk';
   requestId: string;
-  delta: string;              // streamed tokens
+  delta: string; // streamed tokens
   time: number;
 };
 
@@ -48,4 +48,9 @@ export type LlmError = {
   time: number;
 };
 
-export type InspectorEvent = LlmStart | LlmChunk | LlmEnd | RagRetrieve | LlmError;
+export type InspectorEvent =
+  | LlmStart
+  | LlmChunk
+  | LlmEnd
+  | RagRetrieve
+  | LlmError;
