@@ -6,6 +6,8 @@
 
 The Rozenite Cactus Plugin provides real-time LLM inspection + monitoring for Cactus-powered chatbots within your React Native DevTools environment. Track LLM + Embedding requests, token streaming, RAG retrievals, and performance metrics in real-time.
 
+Learn more about [Cactus here](https://cactuscompute.com)! 
+
 ## Features
 
 - **Real-time LLM Inspection**: Monitor Cactus LLM requests, responses, and streaming tokens
