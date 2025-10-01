@@ -1,4 +1,4 @@
-<img src="./logo.png" alt="Cactus Plugin Logo" width="100" height="100" />
+<img src="./logo.png" alt="Cactus Plugin Logo" width="300" height="300" />
 
 ### A Rozenite plugin that provides comprehensive Cactus LLM inspection for React Native applications.
 
