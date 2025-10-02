@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { useRozeniteDevToolsClient } from '@rozenite/plugin-bridge';
 import type { InspectorEvent } from '../shared/messaging';
 
-export default function CactusPanel() {
+export function CactusPanel() {
   const client = useRozeniteDevToolsClient();
   const [events, setEvents] = useState<InspectorEvent[]>([]);
 
@@ -33,7 +33,7 @@ export default function CactusPanel() {
 
   return (
     <div style={{ padding: 12 }}>
-      <h2>Cactus / RAG Inspector</h2>
+      <h2>Cactus Inspector</h2>
       {sessions.map(([rid, evts]) => (
         <div
           key={rid}

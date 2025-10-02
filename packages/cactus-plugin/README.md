@@ -7,9 +7,7 @@
 
 [![mit licence][license-badge]][license] [![npm downloads][npm-downloads-badge]][npm-downloads] [![Chat][chat-badge]][chat] [![PRs Welcome][prs-welcome-badge]][prs-welcome]
 
-The Rozenite Cactus Plugin provides real-time LLM inspection + monitoring for Cactus-powered chatbots within your React Native DevTools environment. Track LLM + Embedding requests, token streaming, RAG retrievals, and performance metrics in real-time.
-
-Learn more about [Cactus here](https://cactuscompute.com)! 
+The **Cactus Plugin for Rozenite** provides real-time LLM inspection and RAG monitoring for [Cactus](https://cactuscompute.com)-powered React Native applications. Track LLM requests, token streaming, RAG retrievals, and performance metrics through a dedicated React Native DevTools panel.
 
 ## Features
 
@@ -32,6 +30,45 @@ npm install cactus-rozenite
 
 ```bash
 npm install cactus-react
+```
+
+## API Reference
+
+The plugin exports two main functions:
+
+### `postInspectorEvent(event: InspectorEvent): void`
+
+**Direct event posting function** - The primary way to send events to the DevTools panel.
+
+```typescript
+import { postInspectorEvent } from 'cactus-rozenite';
+
+postInspectorEvent({
+  kind: 'llm:start',
+  requestId: 'req-123',
+  model: 'cactus-model',
+  params: { temperature: 0.7 },
+  promptPreview: 'Hello world',
+  time: Date.now(),
+});
+```
+
+### `useCactusDevTools(options?): { client: Client, postEvent: Function }`
+
+**React hook** - Returns an object with the DevTools client and a shortcut postEvent method.
+
+```typescript
+import { useCactusDevTools } from 'cactus-rozenite';
+
+const { client, postEvent } = useCactusDevTools();
+
+// Use postEvent directly
+postEvent({
+  kind: 'llm:end',
+  requestId: 'req-123',
+  latencyMs: 250,
+  time: Date.now(),
+});
 ```
 
 ## Quick Start

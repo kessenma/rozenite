@@ -12,6 +12,9 @@ if (isDev && !isWeb && !isServer) {
   postInspectorEvent =
     require('./src/react-native/postInspectorEvent').postInspectorEvent;
 } else {
-  useCactusDevTools = () => ({ subscribe: () => ({ unsubscribe: () => {} }) });
+  useCactusDevTools = () => ({
+    client: { subscribe: () => ({ unsubscribe: () => {} }) },
+    postEvent: () => {}
+  });
   postInspectorEvent = () => {};
 }

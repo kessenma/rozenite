@@ -16,7 +16,16 @@ export const useCactusDevTools = (options: UseCactusDevToolsOptions = {}) => {
     // Set up your Cactus integration here
     // This hook provides the client for sending events to DevTools
     // The actual event sending would happen in your app's Cactus usage
+
   }, [client, enabled]);
 
-  return client;
+  return {
+    client,
+    postEvent: (event: any) => {
+      // Import the postInspectorEvent function and call it with event
+      import('./postInspectorEvent').then(({ postInspectorEvent }) => {
+        postInspectorEvent(event);
+      });
+    }
+  };
 };
