@@ -7,12 +7,15 @@
   "module": "./dist/react-native.js",
   "types": "./dist/react-native.d.ts",
   "files": ["dist", "README.md", "package.json", "logo.png"],
-  "scripts": {},
+  "scripts": {
+    "build": "npx rozenite build"
+  },
   "dependencies": {
     "@rozenite/plugin-bridge": "^1.0.0-alpha.15",
     "nanoevents": "^9.1.0"
   },
   "devDependencies": {
+    "@rozenite/vite-plugin": "workspace:*",
     "postcss": "^8.5.6",
     "typescript": "^5.7.3",
     "@types/react": "~18.3.12",
