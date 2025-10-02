@@ -1,6 +1,9 @@
-<img src="./logo.png" alt="Cactus Plugin Logo" width="300" height="300" />
+<h1 align="center">🌵 Cactus Plugin for Rozenite</h1>
+<p align="center">Real-time LLM inspection and RAG monitoring for Cactus-powered React Native apps</p>
 
-### A Rozenite plugin that provides comprehensive Cactus LLM inspection for React Native applications.
+<p align="center">
+  <em>Built with ❤️ for the Cactus & Rozenite ecosystem</em>
+</p>
 
 [![mit licence][license-badge]][license] [![npm downloads][npm-downloads-badge]][npm-downloads] [![Chat][chat-badge]][chat] [![PRs Welcome][prs-welcome-badge]][prs-welcome]
 
@@ -22,7 +25,7 @@ Learn more about [Cactus here](https://cactuscompute.com)!
 Install the Cactus plugin as a dependency:
 
 ```bash
-npm install @rozenite/cactus-plugin
+npm install cactus-rozenite
 ```
 
 **Note**: This plugin requires Cactus libraries as peer dependencies. Make sure you have Cactus React installed:
@@ -36,7 +39,7 @@ npm install cactus-react
 ### 1. Install the Plugin
 
 ```bash
-npm install @rozenite/cactus-plugin cactus-react
+npm install cactus-rozenite
 ```
 
 ### 2. Integrate with Your App
@@ -44,7 +47,7 @@ npm install @rozenite/cactus-plugin cactus-react
 Add Cactus event emission to your React Native app - wrap your Cactus operations:
 
 ```typescript
-import { postInspectorEvent } from '@rozenite/cactus-plugin';
+import { postInspectorEvent } from 'cactus-rozenite';
 import { CactusAgent } from 'cactus-react';
 
 // Example: Initialize Cactus with event monitoring
@@ -187,7 +190,7 @@ For React components, you can create custom hooks:
 
 ```typescript
 import { useCallback } from 'react';
-import { useCactusDevTools, postInspectorEvent } from '@rozenite/cactus-plugin';
+import { useCactusDevTools, postInspectorEvent } from 'cactus-rozenite';
 
 function useMonitoredCactus() {
   // Initialize DevTools (optional)
@@ -240,9 +243,9 @@ postInspectorEvent({
 });
 ```
 
-## Made with ❤️ for the Cactus + Rozenite Ecosystem by Kyle Essenmacher
+## Made with ❤️ for the Cactus + Rozenite Ecosystem
 
-`@rozenite/cactus-plugin` is an open-source project that enhances the Cactus experience for React Native developers.
+`cactus-rozenite` is an open-source project that enhances the Cactus experience for React Native developers.
 
 Contribute to the ongoing evolution of local LLM tooling!
 
@@ -256,7 +259,7 @@ Contribute to the ongoing evolution of local LLM tooling!
 [license-badge]: https://img.shields.io/npm/l/rozenite?style=for-the-badge
 [license]: https://github.com/callstackincubator/rozenite/blob/main/LICENSE
 [npm-downloads-badge]: https://img.shields.io/npm/dm/rozenite?style=for-the-badge
-[npm-downloads]: https://www.npmjs.com/package/@rozenite/cactus-plugin
+[npm-downloads]: https://www.npmjs.com/package/cactus-rozenite
 [prs-welcome-badge]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge
 [prs-welcome]: https://github.com/callstackincubator/rozenite/blob/main/CONTRIBUTING.md
 [chat-badge]: https://img.shields.io/discord/426714625279524876.svg?style=for-the-badge
