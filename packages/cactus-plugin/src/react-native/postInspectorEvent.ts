@@ -6,7 +6,9 @@ let devToolsClient: any = null;
 // Initialize the client once
 const initializeClient = () => {
   if (!devToolsClient) {
-    devToolsClient = useRozeniteDevToolsClient();
+    devToolsClient = useRozeniteDevToolsClient({
+      pluginId: 'cactus-rozenite',
+    });
   }
   return devToolsClient;
 };

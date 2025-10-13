@@ -1,18 +1,20 @@
 import { useEffect, useMemo, useState } from 'react';
 import { useRozeniteDevToolsClient } from '@rozenite/plugin-bridge';
-import type { InspectorEvent } from '../shared/messaging';
+import type { InspectorEvent, CactusEventMap } from '../shared/messaging';
 
 export default function CactusPanel() {
-  const client = useRozeniteDevToolsClient();
+  const client = useRozeniteDevToolsClient({
+    pluginId: 'cactus-rozenite',
+  });
   const [events, setEvents] = useState<InspectorEvent[]>([]);
 
   useEffect(() => {
     if (!client) return;
 
     // Subscribe to our custom event channel
-    const subscription = client.subscribe<InspectorEvent>(
+    const subscription = client.subscribe(
       'cactus-inspector:event',
-      (event) => {
+      (event: InspectorEvent) => {
         setEvents((prev) => [...prev, event]);
       }
     );
