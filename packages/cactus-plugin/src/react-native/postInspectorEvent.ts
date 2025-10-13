@@ -1,14 +1,12 @@
-import { useRozeniteDevToolsClient } from '@rozenite/plugin-bridge';
+import { getRozeniteDevToolsClient } from '@rozenite/plugin-bridge';
 import type { InspectorEvent } from '../shared/types';
 
 let devToolsClient: any = null;
 
 // Initialize the client once
-const initializeClient = () => {
+const initializeClient = async () => {
   if (!devToolsClient) {
-    devToolsClient = useRozeniteDevToolsClient({
-      pluginId: 'cactus-rozenite',
-    });
+    devToolsClient = await getRozeniteDevToolsClient('cactus-rozenite');
   }
   return devToolsClient;
 };
@@ -19,13 +17,14 @@ export const postInspectorEvent = (event: InspectorEvent): void => {
     return;
   }
 
-  try {
-    const client = initializeClient();
-    if (client) {
-      // Send the event to the DevTools panel
-      client.send?.('cactus-inspector:event', event);
-    }
-  } catch (error) {
-    console.warn('Rozenite Cactus Plugin: Failed to post inspector event:', error);
-  }
+  initializeClient()
+    .then(client => {
+      if (client) {
+        // Send the event to the DevTools panel
+        client.send?.('cactus-inspector:event', event);
+      }
+    })
+    .catch(error => {
+      console.warn('Rozenite Cactus Plugin: Failed to initialize client:', error);
+    });
 };

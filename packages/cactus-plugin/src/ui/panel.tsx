@@ -11,15 +11,15 @@ export default function CactusPanel() {
   useEffect(() => {
     if (!client) return;
 
-    // Subscribe to our custom event channel
-    const subscription = client.subscribe(
+    // Subscribe to our custom event channel - use own messaging system
+    const unsubscribe = client.onMessage(
       'cactus-inspector:event',
       (event: InspectorEvent) => {
         setEvents((prev) => [...prev, event]);
       }
     );
 
-    return () => subscription.unsubscribe();
+    return () => unsubscribe?.();
   }, [client]);
 
   // Group by requestId into sessions

@@ -1,7 +1,7 @@
 {
   "name": "cactus-rozenite",
   "description": "Cactus LLM inspection for Rozenite.",
-  "version": "1.0.0-alpha.17",
+  "version": "1.0.0-alpha.18",
   "type": "module",
   "main": "./dist/react-native.cjs",
   "module": "./dist/react-native.js",
@@ -23,9 +23,7 @@
   },
   "peerDependencies": {
     "react": "*",
-    "react-native": "*",
-    "react-native-mmkv": "*",
-    "rozenite": "*"
+    "react-native": "*"
   },
   "license": "MIT"
 }
