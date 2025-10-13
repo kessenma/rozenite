@@ -1,7 +1,7 @@
 {
   "name": "cactus-rozenite",
   "description": "Cactus LLM inspection for Rozenite.",
-  "version": "1.0.0-alpha.18",
+  "version": "1.0.0-alpha.20",
   "type": "module",
   "main": "./dist/react-native.cjs",
   "module": "./dist/react-native.js",
