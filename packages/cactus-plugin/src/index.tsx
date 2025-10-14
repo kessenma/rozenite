@@ -3,6 +3,9 @@ import type { InspectorEvent } from './shared/types';
 // Export types for app-side usage
 export * from './shared/types';
 
+// Export integration functions for app-side logging
+export * from './integration';
+
 // This function safely posts messages only when Rozenite DevTools is available.
 // App code should import this from the plugin package and call it to emit events.
 export function postInspectorEvent(evt: InspectorEvent): void {
